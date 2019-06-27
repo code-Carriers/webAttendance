@@ -745,7 +745,7 @@ function  qishishuakashijian(){
 								<tr>
 									<td style="background-color: #ebf3fb;">休息时间</td>
 									<!-- <td><input style="width: 100px;" type="text"></td> -->
-									<td><select  name="worktime" style="width:111px">
+									<td><select  name="resttime" style="width:111px">
 											<option value="0">0</option>
 											<option value="0.5">0.5</option>
 											<option value="1">1</option>

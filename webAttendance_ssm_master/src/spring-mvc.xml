@@ -43,7 +43,7 @@ xmlns:task="http://www.springframework.org/schema/task"
 	<bean id="taskUtil" class="com.cmhit.controller.scheduled.Scheduled"></bean>
 	 <task:scheduled-tasks scheduler="scheduler">
        <!-- 每20秒触发任务 -->
-        <task:scheduled ref="taskUtil" method="insertData" cron="0/20 * * * * ?"/>
+        <task:scheduled ref="taskUtil" method="insertData" cron="0/60 * * * * ?"/>
     </task:scheduled-tasks>
 	
 	<mvc:annotation-driven />

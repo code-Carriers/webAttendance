@@ -221,8 +221,8 @@
 		-classPeriod.restTime*60),
 		ROUND(TIME_TO_SEC(TIMEDIFF(
 		CONCAT('2019-02-21',' ',timeFromWork),CONCAT('2019-02-21',' ',goToWorkTime)))/60
-		-classPeriod.restTime*60))AS 'workTime'
-		
+		-classPeriod.restTime*60))AS 'workTime',
+		classPeriod.restTime
 		FROM classPeriod INNER JOIN
 		attendanceClassChild ON classPeriod.attendanceClassChildId =
 		attendanceClassChild.attendanceClassChildId
@@ -247,8 +247,8 @@
      SELECT
      staffclassperiodsigninrecord.staffClassPeriodSignInRecordId
           FROM
-     webattendance.staffclassperiodsigninrecord
-     INNER JOIN webattendance.staffclassesrecord 
+     staffclassperiodsigninrecord
+     INNER JOIN staffclassesrecord 
         ON (staffclassperiodsigninrecord.staffClassesRecordId = staffclassesrecord.staffClassesRecordId)
         WHERE staffclassperiodsigninrecord.classPeriodId=#{one_classPeriodId} AND workDate>NOW();
         
